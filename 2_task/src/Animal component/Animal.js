@@ -1,3 +1,5 @@
+import './Animal.css'
+
 const Animal = (props) => {
     return(
         <div className = "card">
