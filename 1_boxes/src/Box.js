@@ -3,7 +3,7 @@ import './Box.css';
 
 const Box = (props) => {
       return (
-    <div class="box">
+    <div className="box">
       <h1>
         {props.name}
       </h1>
