@@ -1,36 +1,19 @@
-import React, { Component } from 'react';
-import './Animal.css'
+import React from "react";
+import "./Animal.css";
 
-/* const Animal = (props) => {
-    return(
-        <div className = "card">
-            <img src={props.imgSrc} alt="animalImage"/>
-            <h2>{props.animalName}</h2>
-            <button onClick={()=> window.alert(`Hello! I am ${props.animalName}. It is nice to meet you!`)}>Greet</button>
-        </div>
-    );
-}; */
+const greetingText = (name) => {
+  console.log(name);
+  alert(`Hello, I am ${name}. It is nice to meet you!`);
+};
 
-const animals = [{
-    "animalName": "pig",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/61WdixjupoL._AC_SL1024_.jpg"
-}, {
-    "animalName": "bear",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/51FyMq6lJkL._AC_.jpg"
-}, {
-    "animalName": "duck",
-    "imgSrc": "https://images-na.ssl-images-amazon.com/images/I/71LgxJzwFKL._SL1500_.jpg"
-}]
+const Animal = (props) => {
+  return (
+    <div className="card">
+      <h1>{props.name}</h1>
+      <img alt={props.name} src={props.img} />
+      <button onClick={() => greetingText(props.name)}>Click me!</button>
+    </div>
+  );
+};
 
-class Animal extends React.Component {
-    render() {
-
-        return (<div className = "card">
-            <img src={animals[this.props.animalIndex].imgSrc} alt="animalImage"/>
-            <h2>{animals[this.props.animalIndex].animalName}</h2>
-            <button onClick={()=> window.alert(`Hello! I am ${animals[this.props.animalIndex].animalName}. It is nice to meet you!`)}>Greet</button>
-        </div>)
-    }
-}
-
-export default Animal
+export default Animal;
