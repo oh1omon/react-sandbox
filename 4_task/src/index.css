@@ -1,13 +1,76 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-attachment: fixed;
+  background-color: #333;
+  color: white;
+}
+.article-container {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.article {
+  max-width: 50%;
+  height: 50%;
+  color: #62bbc1;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+}
+.text-container {
+  text-align: center;
+}
+.text-container p {
+  margin: 15px 5px;
+}
+.article img {
+  margin: 1rem;
+  width: 50%;
+  float: left;
+}
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #222222;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #222222;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+button {
+  width: 7rem;
+  height: 2rem;
+  border: 0;
+  background-color: #ec058e;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.fw600 {
+  font-weight: 600;
 }
