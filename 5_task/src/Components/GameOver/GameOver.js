@@ -1,9 +1,9 @@
 import React from 'react';
-import './GameOver.css'
+import './GameOver.css';
 
 const closeHandler = () => {
     window.location.reload();
-}
+};
 
 const GameOver = (props) => {
     return (

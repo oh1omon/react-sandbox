@@ -1,0 +1,10 @@
+body {
+    background-color: #333;
+    color: #ff08ff;
+}
+.app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row;
+}
