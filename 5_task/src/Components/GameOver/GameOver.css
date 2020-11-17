@@ -1,29 +1,39 @@
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: grid;
-  justify-items: center;
-  align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 .gameover_box {
-  background: white;
-  padding: 1rem;
-  width: 40%;
-  min-height: 25%;
-  border-radius: 10px;
-  position: relative;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+    background: linear-gradient(#a6c1ee, #fbc2eb) no-repeat center center/cover;
+    padding: 1rem;
+    width: 40%;
+    min-height: 25%;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .gameover_box button {
-  background: lightgrey;
-  position: absolute;
-  top: 5px;
-  right: 5px;
+    background: lightgrey;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+@media (max-width: 768px) {
+    .gameover_box {
+        width: 75%;
+        min-height: 35%;
+    }
+    .gameover_box button {
+        position: relative;
+        margin: 0;
+    }
 }

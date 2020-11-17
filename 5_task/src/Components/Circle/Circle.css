@@ -1,25 +1,32 @@
 .circle {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background-color: black;
-  display: inline-block;
-  margin: 1rem;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline-block;
+    margin: 1rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
 .green {
-  background-color: green;
+    background: linear-gradient(#7be689, #d4fc79) no-repeat center center/cover;
 }
 .blue {
-  background-color: blue;
+    background: linear-gradient(#9890e3, #b1f4cf) no-repeat center center/cover;
 }
 .red {
-  background-color: red;
+    background: linear-gradient(#fa709a, #fee140) no-repeat center center/cover;
 }
 .yellow {
-  background-color: yellow;
+    background: linear-gradient(#d299c2, #fef9d7) no-repeat center center/cover;
 }
 .circle.active {
-  background-color: black;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+@media (max-width: 768px) {
+    .circle {
+        height: 100px;
+        width: 100px;
+    }
 }

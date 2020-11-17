@@ -1,11 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Mina&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mina&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  font-family: "Mina", sans-serif;
-  background-attachment: fixed;
-  text-align: center;
+    font-family: 'Mina', sans-serif;
+    background-attachment: fixed;
+    text-align: center;
 }
 button {
-  font-family: inherit;
-  cursor: pointer;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 0;
+    box-shadow: 0 0 5px 2.5px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+}
+.wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#a6c1ee, #fbc2eb) no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+}
+.game {
+    margin-top: 5%;
 }
