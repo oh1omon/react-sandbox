@@ -1,53 +1,65 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Form from './Form/Form';
 import View from './View/View';
 import Popup from './Popup/Popup';
+import NotesList from './NotesList/NotesList';
 import './App.css';
+import axios from 'axios';
 
-class App extends Component {
-    state = {
+const App = () => {
+    const [note, setNote] = useState({
         firstname: '',
         lastname: '',
         phonenumber: '',
         message: '',
         role: '',
         showPopup: false,
-    };
+    });
 
-    valueHandler = (event) => {
-        this.setState({
+    const [showPopup, setShowPopup] = useState(false);
+
+    const valueHandler = (event) => {
+        setNote({
+            ...note,
             [event.target.name]: event.target.value,
         });
     };
 
-    submitHandler = (event) => {
-        event.preventDefault();
-        this.setState({ showPopup: true });
+    const submitHandler = () => {
+        axios.post('http://localhost:3001/notes', note);
+        window.location.reload();
     };
 
-    render() {
-        return (
+    const popupHandler = (event) => {
+        event.preventDefault();
+        setShowPopup(true);
+    };
+
+    return (
+        <div>
             <div className="app">
-                <Form valueHandler={this.valueHandler} sub={this.submitHandler} />
+                <Form valueHandler={valueHandler} submit={popupHandler} />
                 <View
-                    firstname={this.state.firstname}
-                    lastname={this.state.lastname}
-                    phonenumber={this.state.phonenumber}
-                    role={this.state.role}
-                    message={this.state.message}
+                    firstname={note.firstname}
+                    lastname={note.lastname}
+                    phonenumber={note.phonenumber}
+                    role={note.role}
+                    message={note.message}
                 />
-                {this.state.showPopup && (
+                <NotesList />
+                {showPopup && (
                     <Popup
-                        firstname={this.state.firstname}
-                        lastname={this.state.lastname}
-                        phonenumber={this.state.phonenumber}
-                        role={this.state.role}
-                        message={this.state.message}
+                        firstname={note.firstname}
+                        lastname={note.lastname}
+                        phonenumber={note.phonenumber}
+                        role={note.role}
+                        message={note.message}
+                        submit={submitHandler}
                     />
                 )}
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default App;

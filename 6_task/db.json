@@ -1,0 +1,30 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Artem",
+      "lastname": "Zagarov",
+      "phonenumber": "123456789",
+      "message": "Some really inportant message for todat!",
+      "role": "student"
+    },
+    {
+      "firstname": "wqewe",
+      "lastname": "wqrwqr",
+      "phonenumber": "eweq",
+      "message": "qewe",
+      "role": "",
+      "showPopup": false,
+      "id": 2
+    },
+    {
+      "firstname": "qweqe",
+      "lastname": "wqewqe",
+      "phonenumber": "qwe",
+      "message": "wqewqe",
+      "role": "student",
+      "showPopup": false,
+      "id": 3
+    }
+  ]
+}
