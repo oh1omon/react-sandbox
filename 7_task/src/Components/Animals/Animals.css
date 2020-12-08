@@ -1,0 +1,8 @@
+.animals {
+    display: grid;
+    align-items: flex-start;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    gap: 1rem;
+}
